@@ -1,0 +1,45 @@
+*CTF name: XSS-Reflected(POST)
+       * CTF Category:A3-bwapp
+                                                 --> Challenge Description<--
+Step 1- I inserted my first and last name to see what will happen
+Step 2- As we can see it reflected my first and last name in the url of the tab
+Step 3- I tried to insert a JS code to see if it has a xss vulnerable using <script>alert('1')</script> 
+Step 4- When i clicked enter it showed me an alert of 1 and here we have a xss vulnrability:)
+
+*CTF name: XSS-Reflected(HREF)
+       * CTF Category:A3-bwapp
+                                                 --> Challenge Description<--
+Step 1- So now we can see that we have to enter our name first so let's enter it and see what will happen
+Step 2- we now see that it reflected my name so let's try to write a js code using <script>alert('1')></script>
+Step 3- what we see right now that it reflected the JS code so i thought what if there is a filter or a tag that we should remove?!
+Step 4- viewing the source code
+Step 5- it' unsual to see => right? or maybe it is the vulnrability!
+Step 6- i tried to enter =><script>alert('1')</script> and here it is , it showed an alert of 1 .. congrats now you have a xss vulnrability
+
+*CTF name: XSS-Reflected(cookies)
+       * CTF Category:A3-bwapp
+                                                 --> Challenge Description<--
+Step 1- Select your favouite genre
+Step 2- We have to steal cookies first
+Step 3- Open Burbsuite and turn on the intercept button and click on like again and now you have a request 
+Step 4- Try to change the genre from the request first line and see if it will affect the cookie or not
+Step 5- Yess! it got reflected so now we have a XSS vulnrability
+
+
+*CTF name: XSS-Reflected(SQLiteManager)
+       * CTF Category:A3-bwapp
+                                                 --> Challenge Description<--
+Step 1- click on SQLiteManager
+Step 2- so we can see that there is 2 text boxes so it can be where we going to insert the JS code
+Step 3- i tried to enter <script>alert('1')</script> but nothing happened so let's check the source code of the page
+Step 4- now we have 2 sources let's try viewing the first one "left.php" .. there is not any text boxes where i can insert any JS code
+Step 5- let's try the second source which is "main.php" .. finally there is a text box so now we can insert the code -->>  ?dbsel=&#039;"</script><script>alert(document.cookie)</script>
+Step 6- here we have an alert with the PHPSESSID
+
+*CTF name: SQL Injection(POST/Select)
+       * CTF Category:v2-bwapp
+                                                 --> Challenge Description<--
+Step 1- we are going to select a movie and see what will happen..nothing
+step 2- using burpsuite we are going to enable the intercept and select the movie again 
+step 3- let's try making some changes in the request that we just got maybe by adding ' or '' and see what will happen
+step 4- here we go , it showed that there is a sql syntax error!
